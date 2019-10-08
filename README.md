@@ -6,7 +6,7 @@
  [C620 ESC](https://github.com/RoboGrinder-ECE/Motor_Control/blob/master/Document/RoboMaster%20C620%20Brushless%20DC%20Motor%20Speed%20Controller%20V1.01.pdf)
  is used for our robot. 
 
-## Signal modes in C620 ESC
+### Signal modes in C620 ESC
 C620 ESC supports two signal modes.
 1. 20-500Hz PWM (We rarely use the PWM to control the C620 since there is no feedback from the motor.)
 2. CAN communication
@@ -131,4 +131,5 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan) {
 }
 ```
 
-
+## Things to be done before Saturaday workshop
+Watch the PID tutorial video: [Link](https://www.youtube.com/watch?v=wkfEZmsQqiA&list=PLn8PRpmsu08pQBgjxYFXSsODEF3Jqmm-y)
