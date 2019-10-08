@@ -1,23 +1,22 @@
-# Motor control in STM32
+# Motor control in STM32  
 
-## Introduction
 [RoboMaster M3508](https://github.com/RoboGrinder-ECE/Motor_Control/blob/master/Document/RoboMaster%20M3508%20P19%20Brushless%20DC%20Gear%20Motor%20V1.0.pdf)
  motor and 
  [C620 ESC](https://github.com/RoboGrinder-ECE/Motor_Control/blob/master/Document/RoboMaster%20C620%20Brushless%20DC%20Motor%20Speed%20Controller%20V1.01.pdf)
  is used for our robot. 
 
-### Signal modes in C620 ESC
+## Signal modes in C620 ESC
 C620 ESC supports two signal modes.
 1. 20-500Hz PWM (We rarely use the PWM to control the C620 since there is no feedback from the motor.)
 2. CAN communication
 
-### CAN Commnication Protocol
+## CAN Commnication Protocol
 **The bitrate of the CAN bus is 1 Mbps**  
 Read though the
 [C620 ESC](https://github.com/RoboGrinder-ECE/Motor_Control/blob/master/Document/RoboMaster%20C620%20Brushless%20DC%20Motor%20Speed%20Controller%20V1.01.pdf)
 Documentation CAN Communication Protocol section from page 14 to page 17
 
-### Example: Control the current output for the motor with id = 1
+## Example: Control the current output for the motor with id = 1
 1. Prepare the CAN header and data buffer
 ```
 txHeader.StdId = 0x200;
@@ -49,7 +48,7 @@ if (HAL_CAN_AddTxMessage(&hcan1, &txHeader, txData, &txMailbox) != HAL_OK) {
 }
 ```
 
-### Example: Receive and decode the motor feedback message
+## Example: Receive and decode the motor feedback message
 1. Prepare the CAN header and data buffer to receive the message
 ```
 CAN_RxHeaderTypeDef rxHeader;
