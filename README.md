@@ -23,7 +23,6 @@ txHeader.StdId = 0x200;
 txHeader.RTR   = CAN_RTR_DATA;
 txHeader.IDE   = CAN_ID_STD;
 txHeader.DLC   = 8;
-txHeader.TransmitGlobalTime = DISABLE;
 txData[0] = 0;
 txData[1] = 0;
 txData[2] = 0;
